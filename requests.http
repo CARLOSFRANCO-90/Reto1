@@ -1,0 +1,41 @@
+###
+POST http://localhost:6000/api/v1/people/person HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_name": "Carlos",
+    "lastname": "Gil",
+    "age": 30,
+    "email": "carlos.franco9015@umanizales.edu.co",
+    "proffession": "Investigador",
+    "address_work":{
+        "code_zip": "170004",
+        "city_name": "Manizales",
+        "coordinates": [7236426, -2387355]
+    }
+}
+###
+GET http://localhost:6000/api/v1/people HTTP/1.1
+###
+GET http://localhost:6000/api/v1/people/632cfc738bbb05a5755b62db HTTP/1.1
+
+###
+PUT http://localhost:6000/api/v1/people/632cfc738bbb05a5755b62db HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_name": "juancho",
+    "lastname": "Puerta",
+    "age": 40,
+    "email": "juanchito123@hotmail.com",
+    "proffession": "junior",
+    "address_work":{
+        "code_zip": "170004",
+        "city_name": "Manizales",
+        "coordinates": [7236426, -2387355]
+    }
+}
+
+###
+DELETE http://localhost:6000/api/v1/people/632cfc738bbb05a5755b62db HTTP/1.1
+
